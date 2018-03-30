@@ -9,7 +9,7 @@ $registrationFormHTML =
         <input type="password" name="newUserPassword" id="newUserPassword" />
 		<br/>
 		<label for="newUserEmail">Email:</label>
-		<input type="email" name="newUserEmail" id="newUserEmail" />
+		<input type="email" name="newUserEmail" id="newUserEmail" required/>
 		<br/>
         <input type="submit" name="register" id="register" value="Register" />
     </form>

@@ -12,6 +12,9 @@ if (isset($_POST['login'])) {
 		$info = checkLogin($_POST['username'],$_POST['password']);
 		$_SESSION['userInfo'] = $info;
 		require('chat.php');
+}
+else if(isset($_POST['newUser'])){
+	require('register.php');
 } else {
 echo
 '<div id="loginform">
@@ -24,6 +27,9 @@ echo
 		<br/>
         <input type="submit" name="login" id="login" value="Login" />
     </form>
+	<form action="" method="post">
+		<input type="submit" value="New User?" name="newUser" id="newUserButton" />
+	</form>
 </div>';
 }
 ?>

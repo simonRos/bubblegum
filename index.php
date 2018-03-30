@@ -14,6 +14,7 @@
 </head>
 <body> 
 	<?php
+		//var_dump($_POST);
 		if(isset($_POST['logout']) && $_POST['logout'] == true){
 			$_SESSION['userInfo'] = null;
 			$_POST['logout'] = false;
@@ -23,7 +24,11 @@
 			require('chat.php');
 		}
 		else{
-			require('login.php');
+			if(isset($_POST['newUser']) || isset($_POST['register'])){
+				require('register.php');
+			}else{
+				require('login.php');
+			}
 		}
 	?>
 </body>
