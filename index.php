@@ -21,7 +21,7 @@
 			require('login.php');
 		}
 		else if (isset($_SESSION['userInfo']) && $_SESSION['userInfo']['valid']){
-			require('chat.php');
+			require('chatSelect.php');
 		}
 		else{
 			if(isset($_POST['newUser']) || isset($_POST['register'])){
